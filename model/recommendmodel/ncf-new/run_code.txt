@@ -1,0 +1,7 @@
+conda install scipy
+pip install numpy
+conda install tensorflow==1.12.0
+pip install keras==2.2.4
+pip install h5py
+
+python MLP.py --dataset ncf --epochs 10 --batch_size 256 --layers [128,64,32,16,8,4] --reg_layers [0,0,0,0,0,0] --num_neg 4 --lr 0.0003 --learner adam --verbose 1 --out 1
