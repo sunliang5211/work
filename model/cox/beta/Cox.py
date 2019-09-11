@@ -225,8 +225,8 @@ def predict(record, params, state, S0):
 # predict(record, params, S0, evaluation, testTime)
 if __name__ == '__main__':
     # half&half2
-    trainFile = "D:\TelecomData\\train.csv"
-    testFile = "D:\TelecomData\\test.csv"
+    trainFile = "D:\data\sun\survival\\train.csv"
+    testFile = "D:\data\sun\survival\\test.csv"
 
     # 第一次
     x = ["L0005", "L0023", "L0016", "L0020", "L0074", "L0014", "L0117", "L0114", "L0189", "L0215", "L0256", "L0061",
@@ -242,7 +242,7 @@ if __name__ == '__main__':
 
     # 保存模型
     model = {"params": params, "S0": S0_t}
-    joblib.dump(model, 'Cox.model')
+    joblib.dump(model, 'D:\\work\\model\\cox\\beta\\Cox.model')
 
     predict(testRecord, params, state, S0_t)
 
